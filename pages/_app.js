@@ -1,4 +1,3 @@
-// import Layout from '../components/Layout'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import '../styles/globals.css'
