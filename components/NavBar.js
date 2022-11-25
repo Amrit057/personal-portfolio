@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function NavBar() {
     return (
-        <div className="text-white bg-black h-screen flex flex-col p-5">
+        <div className="text-white bg-gray-600 h-screen flex flex-col p-5">
             <div className="flex justify-between p-5">
                 <div>
                     <Link href='/'><h1 className="font-extrabold text-3xl">amrit.</h1></Link>

@@ -13,7 +13,7 @@ export default function Experience() {
     ]
     return (
         <div id="experience">
-            <h1 className="font-extrabold text-4xl mb-5">Experience</h1>
+            <h1 className="font-extrabold text-4xl mb-5 bg-blue-300">Experience</h1>
             {experience.map((exp, i) => {
                 return (
                     <div key={i}>

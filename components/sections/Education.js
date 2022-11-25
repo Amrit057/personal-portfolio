@@ -23,9 +23,9 @@ export default function Education() {
 
     ]
     return (
-        <div className="p-10 bg-gray-300 flex justify-evenly flex-wrap text-center" id="education">
-            <div>
-                <h1 className="font-extrabold text-4xl mb-5">Education</h1>
+        <div className="p-10 bg-gray-300 flex justify-evenly flex-wrap " id="education">
+            <div className="w-[50%] p-4">
+                <h1 className="font-extrabold text-4xl mb-5 bg-blue-300">Education</h1>
                     {data.map((datas, i) => {
                         return (
                             <ul key={i}>
@@ -39,7 +39,7 @@ export default function Education() {
                         )
                     })}
             </div>
-            <div>
+            <div className="w-[50%]  p-4">
                 <Experience />
             </div>
 

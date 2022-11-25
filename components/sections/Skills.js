@@ -28,7 +28,7 @@ export default function Skills() {
     ]
     return (
         <div className="p-10" id="skills">
-            <h1 className="font-extrabold text-4xl mb-5">Skills</h1>
+            <h1 className="font-extrabold text-4xl mb-5 bg-blue-300">Skills</h1>
             <div className="flex flex-col w-64 md:w-96">
                 {
                     skills.map(skill=>{
