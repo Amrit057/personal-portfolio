@@ -1,4 +1,5 @@
-import Image from "next/image"
+import Experience from "./Experience"
+
 export default function Education() {
     const data = [
         {
@@ -22,10 +23,9 @@ export default function Education() {
 
     ]
     return (
-        <div className="p-10 bg-gray-300" id="education">
-            <h1 className="font-extrabold text-4xl mb-5">Education</h1>
-            <div className="flex gap-20">
-                <div>
+        <div className="p-10 bg-gray-300 flex justify-evenly flex-wrap text-center" id="education">
+            <div>
+                <h1 className="font-extrabold text-4xl mb-5">Education</h1>
                     {data.map((datas, i) => {
                         return (
                             <ul key={i}>
@@ -38,10 +38,9 @@ export default function Education() {
                             </ul>
                         )
                     })}
-                </div>
-                {/* <div>
-                    <Image className="shadow-2xl rounded-xl" src="/images/edu.jpg" alt="edu" width={350} height={100} />
-                </div> */}
+            </div>
+            <div>
+                <Experience />
             </div>
 
         </div>

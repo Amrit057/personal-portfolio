@@ -2,18 +2,18 @@ import Link from "next/link";
 
 export default function NavBar() {
     return (
-        <div className="text-white bg-sun bg-no-repeat bg-cover h-screen flex flex-col p-5">
+        <div className="text-white bg-black h-screen flex flex-col p-5">
             <div className="flex justify-between p-5">
                 <div>
                     <Link href='/'><h1 className="font-extrabold text-3xl">amrit.</h1></Link>
                 </div>
                 <div>
-                    <ul className="font-bold text-xl flex gap-7">
+                    <ul className="font-bold text-xl gap-7 hidden lg:flex">
                         <Link href="#bio"><li>About</li></Link>
                         <Link href="#skills"><li>Skills</li></Link>
                         <Link href='#education'><li>Education</li></Link>
-                        <li>Experience</li>
-                        <li>Projects</li>
+                        <Link href='#experience'><li>Experience</li></Link>
+                        <Link href='#projects'><li>Projects</li></Link>
                         <li>Contact</li>
                     </ul>
                 </div>
