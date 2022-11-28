@@ -13,13 +13,13 @@ export default function ContactForm() {
     //     console.log(formData)
     // }
     return (
-        <div className="p-10 bg-green-100 bg-no-repeat bg-contain flex justify-center">
+        <div className="p-10 bg-green-100 bg-no-repeat bg-contain flex justify-center" id="contact">
             <div>
                 <h1 className="font-extrabold text-4xl mb-5">Contact</h1>
                 <form name="contact" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field" className="flex flex-col gap-2">
                     <input name="bot-field" type="hidden"/>
                     <label for="name">Name:</label>
-                    <input className="outline-0 w-96" type="text" id="name" name="name" />
+                    <input className="outline-0 w-96" type="text" id="name" name="name"/>
                     <label for="email">Email:</label>
                     <input className="outline-0 w-96" type="email" id="name" name="email" />
                     <label for="message">Message:</label>
