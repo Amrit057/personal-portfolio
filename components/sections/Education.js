@@ -39,7 +39,7 @@ export default function Education() {
                         )
                     })}
             </div>
-            <div className="w-[50%]  p-4">
+            <div className="p-4 sm:w-[50%]">
                 <Experience />
             </div>
 

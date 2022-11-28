@@ -5,7 +5,7 @@ export default function NavBar() {
             <div>
                 <Link href='/'><h1 className="font-extrabold text-3xl">amrit.</h1></Link>
             </div>
-            <div>
+            <div className="flex">
                 <ul className="font-bold text-xl gap-7 hidden lg:flex">
                     <Link to="bio" spy={true} smooth={true} offset={-50} duration={500}>
                         <li className="hover:border-b-2">About</li>
@@ -26,6 +26,12 @@ export default function NavBar() {
                         <li className="hover:border-b-2">Contact</li>
                     </Link>
                 </ul>
+                <div className="flex flex-col justify-evenly lg:hidden">
+                    <span className="block bg-white w-8 h-1"></span>
+                    <span className="block bg-white w-8 h-1"></span>
+                    <span className="block bg-white w-8 h-1"></span>
+                </div>
+                
             </div>
         </div>
 
