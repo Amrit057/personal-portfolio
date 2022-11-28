@@ -18,15 +18,15 @@ export default function ContactForm() {
                     <input name="bot-field" type="hidden"/>
 
                     <label for="name">Name:</label>
-                    <input className="outline-0 w-96" {...register('name', {required: true})}/>
+                    <input className="outline-0 w-96" id="name" {...register('name', {required: true})}/>
                     {errors.name && <p className="text-red-700">Please enter your name.</p>}
 
                     <label for="email">Email:</label>
-                    <input className="outline-0 w-96" {...register('email', {pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/}, {required: true})}/>
+                    <input className="outline-0 w-96" id="email" {...register('email', {pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/}, {required: true})}/>
                     {errors.email && <p className="text-red-700">Please enter valid email.</p> }
 
                     <label for="message">Message:</label>
-                    <textarea className="outline-0 w-96" rows={5} {...register('message', {required: true})}/>
+                    <textarea className="outline-0 w-96" rows={5} id="message" {...register('message', {required: true})}/>
                     {errors.message && <p className="text-red-700">Please enter your message.</p>}
 
                     <button className="bg-slate-400 rounded-full px-2 py-1 w-20" type="submit">Submit</button>
