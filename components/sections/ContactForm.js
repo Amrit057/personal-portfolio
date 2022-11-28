@@ -16,7 +16,7 @@ export default function ContactForm() {
         <div className="p-10 bg-green-100 bg-no-repeat bg-contain flex flex-col items-center justify-center" id="contact">
             <h1 className="font-extrabold text-4xl mb-5">Contact</h1>
             <div>
-                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit="submit" className="flex flex-col gap-2">
+                <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onSubmit={handleSubmit(handle)} className="flex flex-col gap-2">
                     <input type="hidden" name="bot-field" />
 
                     <label for="name">Name:</label>
