@@ -23,8 +23,8 @@ export default function Education() {
 
     ]
     return (
-        <div className="p-10 bg-gray-300 flex justify-evenly flex-wrap " id="education">
-            <div className="w-[50%] p-4">
+        <div className="p-10 bg-gray-300 flex flex-col justify-evenly sm:flex-row" id="education">
+            <div className=" p-4 sm:w-[50%]">
                 <h1 className="font-extrabold text-4xl mb-5 bg-blue-300">Education</h1>
                     {data.map((datas, i) => {
                         return (
