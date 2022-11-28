@@ -6,7 +6,7 @@ export default function Bio() {
         <div className="bg-gray-300 p-10 flex gap-4 flex-wrap justify-evenly items-center" id="bio">
             <div className="font-bold">
                 <div >
-                    <Image className="bg-transparent shadow-2xl rounded-xl" src="/../public/images/boy.jpg" alt="port" width={400} height={400} />
+                    <Image className="bg-transparent shadow-2xl rounded-xl" src="/images/boy.jpg" alt="port" width={400} height={400} />
                 </div>
                 <div>
                     <div className="text-center">
