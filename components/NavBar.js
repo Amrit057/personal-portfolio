@@ -26,12 +26,13 @@ export default function NavBar() {
                         <li className="hover:border-b-2">Contact</li>
                     </Link>
                 </ul>
+
+                {/* Responsive navbar */}
                 <div className="flex flex-col justify-evenly lg:hidden">
                     <span className="block bg-white w-8 h-1"></span>
                     <span className="block bg-white w-8 h-1"></span>
                     <span className="block bg-white w-8 h-1"></span>
                 </div>
-                
             </div>
         </div>
 
