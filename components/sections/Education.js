@@ -23,12 +23,13 @@ export default function Education() {
 
     ]
     return (
-        <div className="p-10 bg-gray-300 flex flex-col justify-evenly sm:flex-row" id="education">
-            <div className=" p-4 sm:w-[50%]">
-                <h1 className="font-extrabold text-4xl mb-5 bg-blue-300">Education</h1>
+        <div className="flex justify-center bg-gray-300">
+            <div className="w-[1200px] p-10 flex flex-col gap-20 justify-evenly sm:flex-row" id="education">
+                <div className=" p-4 sm:w-[50%]">
+                    <h1 className="font-extrabold text-4xl mb-5 bg-blue-300 p-2">Education</h1>
                     {data.map((datas, i) => {
                         return (
-                            <ul key={i}>
+                            <ul key={i} className="p-2">
                                 <li className="font-bold text-xl ">{datas.college}</li>
                                 <ul className="mb-3">
                                     <li>{datas.year}</li>
@@ -38,11 +39,12 @@ export default function Education() {
                             </ul>
                         )
                     })}
+                </div>
+                <div className="p-4 sm:w-[50%]">
+                    <Experience />
+                </div>
             </div>
-            <div className="p-4 sm:w-[50%]">
-                <Experience />
-            </div>
-
         </div>
+
     )
 }

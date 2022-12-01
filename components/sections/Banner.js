@@ -2,7 +2,7 @@ import Typewriter from "typewriter-effect"
 
 export default function Banner() {
     return (
-        <div className="bg-black h-screen text-white flex items-center justify-center">
+        <div className="bg-black h-screen text-white flex items-center justify-center" id="banner">
             <div>
                 <p className="text-5xl text-center">Hi! I am Amrit Pandey.</p>
                 <div className="text-center sm:text-left">

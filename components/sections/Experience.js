@@ -13,10 +13,10 @@ export default function Experience() {
     ]
     return (
         <div id="experience">
-            <h1 className="font-extrabold text-4xl mb-5 bg-blue-300">Experience</h1>
+            <h1 className="font-extrabold text-4xl mb-5 bg-blue-300 p-2">Experience</h1>
             {experience.map((exp, i) => {
                 return (
-                    <div key={i}>
+                    <div key={i} className="p-2">
                         <li className="list-none font-bold text-lg">{exp.company}</li>
                         <p>{exp.time}</p>
                         <p>{exp.post}</p>

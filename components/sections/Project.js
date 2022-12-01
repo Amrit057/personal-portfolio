@@ -29,7 +29,7 @@ export default function Project() {
     ]
     return (
         <div className="p-10 bg-gray-300" id="projects">
-            <h1 className="font-extrabold text-4xl  text-center mb-5 bg-blue-300">Projects</h1>
+            <h1 className="font-extrabold text-4xl  text-center mb-5 bg-blue-300 p-2">Projects</h1>
             <div className="flex gap-4 justify-evenly flex-wrap">
                 {projects.map((project, i) => {
                     return (
