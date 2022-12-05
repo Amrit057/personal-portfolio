@@ -1,6 +1,9 @@
+import { DarkModeContext } from "../../context/DarkModeContext"
+import { useContext } from "react"
 import Image from "next/image"
 import Link from "next/link"
 export default function Project() {
+    const { darkMode } = useContext(DarkModeContext);
     const projects = [
         {
             img: '/images/travel.jpg',
@@ -28,20 +31,23 @@ export default function Project() {
         }
     ]
     return (
-        <div className="p-10 bg-gray-300" id="projects">
-            <h1 className="font-extrabold text-4xl  text-center mb-5 bg-blue-300 p-2">Projects</h1>
-            <div className="flex gap-4 justify-evenly flex-wrap">
-                {projects.map((project, i) => {
-                    return (
-                        <div className="w-60 h-68 flex flex-col gap-2 items-center p-2 shadow-2xl rounded-lg" key={i}>
-                            <Image className="max-h-24 object-contain" src={project.img} alt="pro-img" width={200} height={200}/>
-                            <h1 className="font-bold">{project.name}</h1>
-                            <p className="text-center max-h-12 overflow-hidden ">{project.desc}</p>
-                            <Link href={`${project.link}`} target='_blank'><button className="bg-slate-400 px-2 py-1 rounded-full">View on github</button></Link>
-                        </div>
-                    )
-                })}
+        <div className="flex justify-center">
+            <div className="p-10 w-[1400px]" id="projects">
+                <h1 className={`font-extrabold text-4xl  text-center mb-5 p-2 ${darkMode ? 'bg-gray-900' : 'bg-gray-400'}`}>Projects</h1>
+                <div className="flex py-5 justify-evenly flex-wrap">
+                    {projects.map((project, i) => {
+                        return (
+                            <div className="w-60 h-68 flex flex-col gap-2 items-center p-2 shadow-2xl rounded-lg" key={i}>
+                                <Image className="max-h-24 object-contain" src={project.img} alt="pro-img" width={200} height={200} />
+                                <h1 className="font-bold">{project.name}</h1>
+                                <p className="text-center max-h-12 overflow-hidden ">{project.desc}</p>
+                                <Link href={`${project.link}`} target='_blank'><button className="bg-slate-400 active:bg-slate-500 px-2 py-1 rounded-full">View on github</button></Link>
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
         </div>
+
     )
 }

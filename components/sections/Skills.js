@@ -1,21 +1,19 @@
-// import Image from "next/image"
+import { useContext } from "react"
+import { DarkModeContext } from "../../context/DarkModeContext"
 export default function Skills() {
+    const {darkMode} = useContext(DarkModeContext);
     const skills = [
         {
             language: 'Html',
             size: '90%',
-            // progress: '90%'
         },
         {
             language: 'Css',
             size: '70%',
-            // progress: '80%',
         },
         {
             language: 'JavaScript',
             size: '60%',
-            // progress: '70%'
-
         },
         {
             language: 'React js',
@@ -32,23 +30,25 @@ export default function Skills() {
     ]
     return (
         <div className="p-10" id="skills">
-            <h1 className="font-extrabold text-4xl mb-5 bg-blue-300 p-2">Skills</h1>
-            <div className="flex flex-col w-64 md:w-96 p-2">
-                {
-                    skills.map(skill=>{
-                        return(
-                            <>
-                            <li className="font-bold list-none">{skill.language}</li>
-                            <div className="bg-gray-100 w-full rounded-full p-1">
-                                <div className={`w-[${skill.size}] bg-green-300 text-right rounded-full`}>
-                                    {skill.size}
-                                </div>
-                            </div>
-                            </>
-                        )
-                    })
-                }
-               </div>
+            <h1 className={`font-extrabold text-4xl mb-5 p-2 ${ darkMode ? 'bg-gray-900' : 'bg-gray-400' }`}>Skills</h1>
+            <div>
+                <ul className="flex flex-col w-64 md:w-96 p-2">
+                    {
+                        skills.map((skill, i) => {
+                            return (
+                                <li key={i}>
+                                    <h1 className="font-bold list-none" >{skill.language}</h1>
+                                    <div className="bg-gray-100 w-full rounded-full p-1">
+                                        <div className={`w-[${skill.size}] bg-green-500 text-right rounded-full`}>
+                                            {skill.size}
+                                        </div>
+                                    </div>
+                                </li>
+                            )
+                        })
+                    }
+                </ul>
+            </div>
         </div>
     )
 }

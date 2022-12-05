@@ -1,4 +1,7 @@
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/DarkModeContext"
 export default function Experience() {
+    const {darkMode} = useContext(DarkModeContext);
     const experience = [
         {
             time: "April-July, 2022",
@@ -13,10 +16,10 @@ export default function Experience() {
     ]
     return (
         <div id="experience">
-            <h1 className="font-extrabold text-4xl mb-5 bg-blue-300 p-2">Experience</h1>
-            {experience.map((exp, i) => {
+            <h1 className={`font-extrabold text-4xl mb-5 p-2 ${ darkMode ? 'bg-gray-900' : 'bg-gray-400' }`}>Experience</h1>
+            {experience.map(exp => {
                 return (
-                    <div key={i} className="p-2">
+                    <div className="p-2" key={exp.company}>
                         <li className="list-none font-bold text-lg">{exp.company}</li>
                         <p>{exp.time}</p>
                         <p>{exp.post}</p>

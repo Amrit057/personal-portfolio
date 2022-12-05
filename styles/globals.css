@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+
+    .navBar{
+        @apply flex justify-between p-5 sticky top-0 border-b-2 border-gray-600
+    }
+    .light{
+        /* @apply bg-gradient-to-b from-gray-900 to-gray-800; */
+        @apply bg-gray-400 text-black
+    }
+
+    .dark{
+        @apply bg-gray-900 text-white
+    }
+}
