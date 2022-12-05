@@ -8,8 +8,7 @@
         @apply flex justify-between p-5 sticky top-0 border-b-2 border-gray-600
     }
     .light{
-        /* @apply bg-gradient-to-b from-gray-900 to-gray-800; */
-        @apply bg-gray-400 text-black
+        @apply bg-slate-500 text-black
     }
 
     .dark{
